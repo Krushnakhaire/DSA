@@ -58,8 +58,12 @@ public class day2 {
             }
         }
         System.out.println("count of positive number is: " + pos);
-        System.out.println("count of negative number is: " + neg);}
-    public  static void main(String args[]){
+        System.out.println("count of negative number is: " + neg);
+    }
+
+
+
+        public  static void main(String args[]){
       int arr[]={2,2,4,4,6,3};
     //   product p=new product();
     //   p.productarr(arr);
