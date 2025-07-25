@@ -34,6 +34,7 @@ public void Recursion1toN(int i,int n){
 
 
 
+    //recursion from N to 1
     public void RecursionNto1(int i,int n){
         if(i<1){
             return;

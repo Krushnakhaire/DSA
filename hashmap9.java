@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//most Highest Occurring Element in an Array:
 public class hashmap9 {
     public int mostFrequentElement(int[] nums) {
         int max = 0;
