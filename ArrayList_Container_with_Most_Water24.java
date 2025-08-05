@@ -14,6 +14,29 @@ public class ArrayList_Container_with_Most_Water24 {
         return maxWater;
     }
 
+
+
+    //2 pointer Approach:
+    public static int storeWater2(ArrayList<Integer> height) {
+        int maxWater = 0;
+        int left = 0;
+        int right = height.size() - 1;
+
+        while (left < right) {
+            int ht = Math.min(height.get(left), height.get(right));
+            int width = right - left;
+            int currWater = ht * width;
+            maxWater = Math.max(maxWater, currWater);
+
+            if (height.get(left) < height.get(right)) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+        return maxWater;
+    }
+
     public static void main(String args[]) {
         ArrayList<Integer> height = new ArrayList<>();
         height.add(1);

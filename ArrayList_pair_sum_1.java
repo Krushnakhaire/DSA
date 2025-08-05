@@ -1,5 +1,7 @@
 
 import java.util.ArrayList;
+//Brute Force Apprach:
+//Time Complexity: O(n^2)
 public class ArrayList_pair_sum_1 {
     public  static boolean pairSum(ArrayList<Integer> list,int target){
         for(int i=0;i<list.size();i++){
@@ -12,6 +14,34 @@ public class ArrayList_pair_sum_1 {
         return false;
 
     }
+
+
+
+    //Optimized Approach:
+    public static boolean pairSum2(ArrayList<Integer> list,int target){
+        int lp=0;
+        int rp=list.size()-1;
+
+        while(lp!=rp){
+            //case 1:
+            if(list.get(lp)+list.get(rp)==target){
+                return true;
+            }
+            //case 2:
+            if(list.get(lp)+list.get(rp)<target){
+                lp++;
+            }else{
+                //case 3:
+                rp--;
+            }
+
+        }
+        return false;
+    }
+
+    
+
+    
     
     public static void main(String args[]){
         ArrayList<Integer> list=new ArrayList<>();

@@ -3,7 +3,6 @@ public class Arraylist_pair_sum_2 {
     public static boolean pairSum(ArrayList<Integer> list, int target) {
         int bp = -1;
         int n = list.size();
-        // Find the breaking point (where the array is rotated)
         for (int i = 0; i < n - 1; i++) {
             if (list.get(i) > list.get(i + 1)) {
                 bp = i;
