@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+class Solution {
+    public int maxSubArray(int[] nums) {
+        int maxsum = Integer.MIN_VALUE;
+        int cs = 0; // current sum
+
+        for (int i = 0; i < nums.length; i++) {
+            cs = cs + nums[i];
+            maxsum = Math.max(cs, maxsum); // update global max before resetting
+            if (cs < 0) {
+                cs = 0; // reset if current sum is negative
+            }
+        }
+
+        return maxsum;
+    }
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number of elements in array:");
+        int n = sc.nextInt(); 
+        
+        int nums[] = new int[n];
+        System.out.println("Enter array elements:");
+        for (int i = 0; i < n; i++) {
+            nums[i] = sc.nextInt();
+        }
+
+        Solution s1 = new Solution();
+        int result = s1.maxSubArray(nums);
+        System.out.println("Max Subarray Sum is: " + result);
+    }
+}
