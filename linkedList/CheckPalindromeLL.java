@@ -1,3 +1,12 @@
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
 
 public class CheckPalindromeLL {
 
@@ -34,6 +43,7 @@ public class CheckPalindromeLL {
         Node left = head;
         Node right = secondHalfHead;
         boolean result = true;
+
         while (right != null) {
             if (left.data != right.data) {
                 result = false;
@@ -54,12 +64,10 @@ public class CheckPalindromeLL {
         head.next.next.next = new Node(2);
         head.next.next.next.next = new Node(1);
 
-        System.out.println(isPalindrome(head));
-
-        Node temp = head;
-        while (temp != null) {
-            System.out.print(temp.data + " ");
-            temp = temp.next;
+        if (isPalindrome(head)) {
+            System.out.println("Linked List is a Palindrome");
+        } else {
+            System.out.println("Linked List is NOT a Palindrome");
         }
     }
 }
