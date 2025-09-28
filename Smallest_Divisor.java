@@ -25,5 +25,12 @@ public class Smallest_Divisor {
         }
         return true;
     }
+    public static void main(String[] args) {
+        Smallest_Divisor sd = new Smallest_Divisor();
+        int[] nums = {1, 2, 5, 9};
+        int limit = 6;
+        int result = sd.smallestDivisor(nums, limit);
+        System.out.println("Smallest Divisor: " + result); // Output: Smallest Divisor: 5
+    }
     
 }
