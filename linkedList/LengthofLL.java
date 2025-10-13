@@ -36,7 +36,5 @@ public class LengthofLL {
         list.insert(10);
         list.insert(20);
         System.out.println("Length of linked list: "+list.length());
-    }
-
-    
+    }  
 }
