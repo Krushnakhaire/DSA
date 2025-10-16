@@ -9,7 +9,7 @@ public class rotatestring {
     }
 
     public static void main(String[] args) {
-        Solution sol = new Solution();
+        rotatestring sol = new rotatestring();
 
         String s1 = "abcde";
         String goal1 = "cdeab";
@@ -21,6 +21,3 @@ public class rotatestring {
         System.out.println("Test 2: " + sol.rotateString(s2, goal2));  
     }
 }
-
-    
-
